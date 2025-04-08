@@ -29,7 +29,7 @@ class CartsController extends GetxController {
       debugPrint('API Carts List: ${apiCartsList.length}');
       return apiCartsList;
     } else {
-      throw Exception('Failed to load carts');
+      throw Exception('Failed to load carts: ${response.statusCode}');
     }
   }
 

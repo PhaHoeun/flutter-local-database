@@ -16,8 +16,25 @@ class _CartsScreenState extends State<CartsScreen> {
   @override
   void initState() {
     con.getAllCarts();
+    // _startPolling();
     super.initState();
   }
+
+  // // In your ProductListScreen state class
+  // Timer? _pollingTimer;
+  // void _startPolling() {
+  //   _pollingTimer = Timer.periodic(Duration(seconds: 3), (timer) {
+  //     setState(() {
+  //       debugPrint('get data here--------------------------');
+  //     });
+  //   });
+  // }
+
+  // @override
+  // void dispose() {
+  //   _pollingTimer?.cancel();
+  //   super.dispose();
+  // }
 
   var con = Get.put(CartsController());
   @override
