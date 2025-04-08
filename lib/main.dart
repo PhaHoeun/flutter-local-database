@@ -5,6 +5,7 @@ import 'package:local_database/page/home_screen.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 
 Future main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   // Init ffi loader if needed.
   if (Platform.isWindows) {
     sqfliteFfiInit();
